@@ -1,0 +1,73 @@
+// wow i haven't written js in a while
+
+ 
+I am in supply closet
+
+I want to fix issues with suit
+
+an hour starting every midnight = observing time
+
+id of one guard
+guard is on duty that night
+when that guard falls asleep or wakes up
+
+e.g. 
+[1518-11-01 00:00] Guard #10 begins shift
+[1518-11-01 00:05] falls asleep
+[1518-11-01 00:25] wakes up
+[1518-11-01 00:30] falls asleep
+[1518-11-01 00:55] wakes up
+[1518-11-01 23:58] Guard #99 begins shift
+[1518-11-02 00:40] falls asleep
+[1518-11-02 00:50] wakes up
+[1518-11-03 00:05] Guard #10 begins shift
+[1518-11-03 00:24] falls asleep
+[1518-11-03 00:29] wakes up
+[1518-11-04 00:02] Guard #99 begins shift
+[1518-11-04 00:36] falls asleep
+[1518-11-04 00:46] wakes up
+[1518-11-05 00:03] Guard #99 begins shift
+[1518-11-05 00:45] falls asleep
+[1518-11-05 00:55] wakes up
+
+time stamp = yyyy-mm-dd hh:mm format
+only 00-59 portion of time stamp is relevqnt 
+as everything is within the first hr of midnight 
+00:00 - 00:59
+
+Visually, these records show that the guards are asleep at these times:
+
+Date   ID   Minute
+        000000000011111111112222222222333333333344444444445555555555
+        012345678901234567890123456789012345678901234567890123456789
+11-01  #10  .....####################.....#########################.....
+11-02  #99  ........................................##########..........
+11-03  #10  ........................#####...............................
+11-04  #99  ....................................##########..............
+11-05  #99  .............................................##########.....
+The columns are Date, which shows the month-day portion of 
+the relevant day; ID, which shows the guard on duty that day;
+and Minute, which shows the minutes during which the guard 
+was asleep within the midnight hour. (The Minute column's 
+header shows the minute's ten's digit in the first row and
+the one's digit in the second row.) Awake is shown as ., 
+and asleep is shown as #.
+
+the min they wake on or sleep on is also counted as that action
+
+
+i want to find the guard most likely to be asleep at a certain time
+
+strat 1)
+    find guard who has slept most minutes
+
+    find the minute that guard will be most likely asleep 
+    (the one they sleep on most)
+
+
+    Data will need to be organised in chronological order before I analyse them
+    
+
+
+FINAL ANSWER: id of the guard multipled by the most likely minute
+
