@@ -1,0 +1,23 @@
+{
+  "name": "logic-blocks",
+  "version": "1.0.0",
+  "description": "This repo has a new folder for each logic block we partake in, it's named after the day it was due.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Poonam-raj/logic-blocks.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Poonam-raj/logic-blocks/issues"
+  },
+  "homepage": "https://github.com/Poonam-raj/logic-blocks#readme",
+  "dependencies": {
+    "fs": "^0.0.1-security"
+  }
+}
