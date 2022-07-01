@@ -1,24 +1,23 @@
 function smallestMultiple(num) {
-  let finalMultiple = 1;
+  // initialising search for smallest multiple
+  let smallestMultipleSearch = 1;
 
-  let isSmallestMultiple = false;
-
-  for (let multipleSearch = 1; !isSmallestMultiple; multipleSearch++) {
+  // creating a infinite loop to go as far into the search as we need
+  while (smallestMultipleSearch > 0) {
     let isDivisibleByAll = true;
     for (let countdown = num; countdown > 0; countdown--) {
-      if (multipleSearch % countdown !== 0) {
+      if (smallestMultipleSearch % countdown !== 0) {
         isDivisibleByAll = false;
+        break;
       }
     }
 
+    // if isDivisibleAll hasn't been switched false we have found smallest multiple
     if (isDivisibleByAll) {
-      finalMultiple = multipleSearch;
-      isSmallestMultiple = true;
+      return smallestMultipleSearch;
     }
+    smallestMultipleSearch++;
   }
-
-  return finalMultiple;
 }
 
-// console.log(smallestMultiple(20)); //232792560
 module.exports = smallestMultiple;

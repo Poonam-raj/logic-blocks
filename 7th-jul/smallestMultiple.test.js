@@ -24,4 +24,7 @@ describe('smallestMultiple', () => {
   test('return 10 when passed 2520', () => {
     expect(smallestMultiple(10)).toBe(2520);
   });
+  test('return 20 when passed 232792560', () => {
+    expect(smallestMultiple(20)).toBe(232792560);
+  });
 });
